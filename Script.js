@@ -5,7 +5,7 @@ class NQueens {
     this.size = size;
   }
 
-  // Depth-First Search (DFS) solution
+  // Depth-First Search (DFS)
   solveDFS() {
     if (this.size < 1) {
       return [];
@@ -32,7 +32,7 @@ class NQueens {
     return solutions;
   }
 
-  // Breadth-First Search (BFS) solution
+  // Breadth-First Search (BFS)
   solveBFS() {
     if (this.size < 1) {
       return [];
@@ -59,7 +59,6 @@ class NQueens {
     return solutions;
   }
 
-  // Add this method to your NQueens class
   solveUCS() {
     if (this.size < 1) {
       return [];
@@ -134,7 +133,7 @@ class NQueens {
     return solutions;
   }
 
-  // Create a random heuristic (this is just an example)
+  // random heuristic (this is for the example)
   randomHeuristic() {
     return Math.random();
   }
@@ -185,7 +184,7 @@ class NQueens {
     }
   
 
-  // Check if there is a conflict between queens on the board
+  // Check for queen conflicts
   conflict(queens) {
     for (let i = 1; i < queens.length; i++) {
       for (let j = 0; j < i; j++) {
@@ -215,7 +214,7 @@ class NQueens {
     return solutions;
   }
   
-  // Modify the DFS method to work with depth limits
+  // Modify DFS to limit depth for 
   dfsWithDepthLimit(solution, depthLimit) {
     const solutions = [];
     const stack = [{ queens: solution, depth: 0 }];
